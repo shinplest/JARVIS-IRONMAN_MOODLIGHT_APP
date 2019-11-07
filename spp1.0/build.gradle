@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "1.0.0"
+
+    defaultConfig {
+        versionCode 23
+        versionName "first"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+        }
+    }
+}
