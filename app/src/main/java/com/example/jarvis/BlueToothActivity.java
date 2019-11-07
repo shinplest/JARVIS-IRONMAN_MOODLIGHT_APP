@@ -5,17 +5,14 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.skydoves.colorpickerview.ColorEnvelope;
-import com.skydoves.colorpickerview.ColorPickerView;
-import com.skydoves.colorpickerview.listeners.ColorEnvelopeListener;
+
+import com.bumptech.glide.Glide;
 
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 import app.akexorcist.bluetotohspp.library.BluetoothState;
@@ -31,6 +28,9 @@ public class BlueToothActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
+
+        ImageView btconnect_image = findViewById(R.id.bt_dialog);
+        Glide.with(this).load(R.raw.arc_bluetooth).into(btconnect_image);
 
         bt = new BluetoothSPP(this);
 
@@ -50,7 +50,8 @@ public class BlueToothActivity extends AppCompatActivity {
                     , Toast.LENGTH_SHORT).show();
         }
 
-        final ImageView btconnect_image = findViewById(R.id.bt_dialog); //연결시도
+
+        //연결시
 
         bt.setBluetoothConnectionListener(new BluetoothSPP.BluetoothConnectionListener() { //연결됐을 때
             public void onDeviceConnected(String name, String address) {
