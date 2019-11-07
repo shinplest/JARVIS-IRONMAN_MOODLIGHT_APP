@@ -7,12 +7,6 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-
-import com.skydoves.colorpickerview.ColorPickerView;
-import com.skydoves.colorpickerview.sliders.BrightnessSlideBar;
-import com.yinglan.alphatabs.AlphaTabView;
 import com.yinglan.alphatabs.AlphaTabsIndicator;
 
 
@@ -36,15 +30,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    View.OnClickListener movePageListener = new View.OnClickListener()
-    {
-        @Override
-        public void onClick(View v)
-        {
-            int tag = (int) v.getTag();
-            vp.setCurrentItem(tag);
-        }
-    };
 
     private class pagerAdapter extends FragmentStatePagerAdapter
     {
