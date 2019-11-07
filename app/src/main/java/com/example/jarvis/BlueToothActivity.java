@@ -3,7 +3,6 @@ package com.example.jarvis;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -13,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 import app.akexorcist.bluetotohspp.library.BluetoothState;
 import app.akexorcist.bluetotohspp.library.DeviceList;
+
 
 public class BlueToothActivity extends AppCompatActivity {
 
@@ -68,10 +68,8 @@ public class BlueToothActivity extends AppCompatActivity {
                 if (bt.getServiceState() == BluetoothState.STATE_CONNECTED) {
                     bt.disconnect();
                 } else {
-//                    Intent intent = new Intent(getApplicationContext(), DeviceList.class);
-//                    startActivityForResult(intent, BluetoothState.REQUEST_CONNECT_DEVICE);
-                    //인텐트 대신 dialog로 도전
-
+                    Intent intent = new Intent(getApplicationContext(), DeviceList.class);
+                    startActivityForResult(intent, BluetoothState.REQUEST_CONNECT_DEVICE);
                 }
             }
         });
