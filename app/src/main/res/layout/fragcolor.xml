@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/colorPickerView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:palette="@drawable/palette"
+        app:selector="@drawable/wheel" />
+
+    <com.skydoves.colorpickerview.sliders.BrightnessSlideBar
+        android:id="@+id/brightnessSlide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:borderColor_BrightnessSlider="@android:color/darker_gray"
+        app:borderSize_BrightnessSlider="5"
+        app:selector_BrightnessSlider="@drawable/wheel"/>
+
+</LinearLayout>

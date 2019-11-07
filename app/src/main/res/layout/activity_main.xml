@@ -24,36 +24,41 @@
         android:orientation="horizontal">
 
         <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/btn_color"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tabText="COLORS"
+            app:tabText="COLORS &amp; BRIGHTNESS"
             app:tabTextSize="13sp"
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b" />
 
         <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/btn_dust"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
 
-            app:tabText="BRIGHTNESS"
+            app:tabText="미세먼"
             app:tabTextSize="13sp"
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b" />
 
         <com.yinglan.alphatabs.AlphaTabView
+            android:id="@+id/btn_mode"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
 
-            app:tabText="MISEMUN-G"
+            app:tabText="Change"
             app:tabTextSize="13sp"
             app:textColorNormal="#999999"
-            app:textColorSelected="#46c01b" />
+            app:textColorSelected="#46c01b"/>
+
+
 
     </com.yinglan.alphatabs.AlphaTabsIndicator>
 
