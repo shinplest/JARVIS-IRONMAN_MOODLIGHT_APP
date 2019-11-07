@@ -1,25 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="연결"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:text="Turn on"/>
+            <Button
+                android:id="@+id/btnSend2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:text="Turn off" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/brightnessText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Brightness level : 0"
+        android:layout_gravity="center"/>
+
 
     <com.skydoves.colorpickerview.ColorPickerView
         android:id="@+id/colorPickerView"
         android:layout_width="350dp"
         android:layout_height="350dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
         app:palette="@drawable/palette"
-        app:selector="@drawable/wheel" />
+        app:selector="@drawable/wheel"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
 
-    <com.skydoves.colorpickerview.sliders.BrightnessSlideBar
-        android:id="@+id/brightnessSlide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:borderColor_BrightnessSlider="@android:color/darker_gray"
-        app:borderSize_BrightnessSlider="5"
-        app:selector_BrightnessSlider="@drawable/wheel"/>
+
 
 </LinearLayout>
