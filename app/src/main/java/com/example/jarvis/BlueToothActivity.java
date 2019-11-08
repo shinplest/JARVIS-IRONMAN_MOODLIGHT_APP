@@ -46,8 +46,8 @@ public class BlueToothActivity extends AppCompatActivity {
         }
         else {
             Toast.makeText(getApplicationContext()
-                    , "블루투스 사용이 가능 기기입니다."
-                    , Toast.LENGTH_SHORT).show();
+                    , "블루투스 사용이 가능한 기기입니다."
+                    , Toast.LENGTH_LONG).show();
         }
 
 
