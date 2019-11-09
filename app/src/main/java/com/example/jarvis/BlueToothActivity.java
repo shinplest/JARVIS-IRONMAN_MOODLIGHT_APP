@@ -58,7 +58,8 @@ public class BlueToothActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext()
                         , "Connected to " + name + "\n" + address
                         , Toast.LENGTH_LONG).show();
-
+                Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
+                startActivity(intent);
             }
 
             public void onDeviceDisconnected() { //연결해제

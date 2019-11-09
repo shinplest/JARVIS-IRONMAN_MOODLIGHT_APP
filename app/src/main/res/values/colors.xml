@@ -3,4 +3,6 @@
     <color name="colorPrimary">#c6342a</color>
     <color name="colorPrimaryDark">#a02c28</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="background">#000000</color>
+    <color name="ironmanyellow">#FFF065</color>
 </resources>
