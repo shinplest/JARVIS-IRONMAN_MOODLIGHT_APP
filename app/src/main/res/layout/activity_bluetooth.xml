@@ -10,9 +10,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/stark_italic"
             android:text="Connet to your Arc Reactor"
             android:textSize="30sp"
-            android:textColor="@color/ironmanyellow"
+            android:textColor="@color/jarvisfont"
             android:layout_gravity="center"
             android:gravity="center"/>
     </LinearLayout>
