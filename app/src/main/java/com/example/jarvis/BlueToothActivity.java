@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 
 import com.bumptech.glide.Glide;
@@ -21,7 +22,7 @@ import app.akexorcist.bluetotohspp.library.DeviceList;
 
 public class BlueToothActivity extends AppCompatActivity {
 
-    private BluetoothSPP bt;
+    public static BluetoothSPP bt;
 
 
     @Override
@@ -58,11 +59,13 @@ public class BlueToothActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext()
                         , "Connected to " + name + "\n" + address
                         , Toast.LENGTH_LONG).show();
+                startService();
                 Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
                 startActivity(intent);
             }
 
             public void onDeviceDisconnected() { //연결해제
+                stopService();
                 Toast.makeText(getApplicationContext()
                         , "연결이 해제 되었습니다.", Toast.LENGTH_SHORT).show();
             }
@@ -70,6 +73,9 @@ public class BlueToothActivity extends AppCompatActivity {
             public void onDeviceConnectionFailed() { //연결실패
                 Toast.makeText(getApplicationContext()
                         , "연결할 수 없습니다.", Toast.LENGTH_SHORT).show();
+                startService();
+                Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -125,6 +131,18 @@ public class BlueToothActivity extends AppCompatActivity {
                 finish();
             }
         }
+    }
+
+    public void startService() {
+        Intent serviceIntent = new Intent(this, BlueToothService.class);
+        serviceIntent.putExtra("inputExtra", "Foreground Service Example in Android");
+
+        ContextCompat.startForegroundService(this, serviceIntent);
+    }
+
+    public void stopService() {
+        Intent serviceIntent = new Intent(this, BlueToothService.class);
+        stopService(serviceIntent);
     }
 
 }

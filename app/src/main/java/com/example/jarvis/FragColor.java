@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import static com.example.jarvis.BlueToothActivity.bt;
+
 public class FragColor extends Fragment {
 
     public FragColor(){
@@ -19,6 +21,7 @@ public class FragColor extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        bt.send("on", true);
     }
 
     @Nullable
