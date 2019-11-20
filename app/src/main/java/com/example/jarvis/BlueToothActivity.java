@@ -135,7 +135,7 @@ public class BlueToothActivity extends AppCompatActivity {
 
     public void startService() {
         Intent serviceIntent = new Intent(this, BlueToothService.class);
-        serviceIntent.putExtra("inputExtra", "Foreground Service Example in Android");
+        serviceIntent.putExtra("inputExtra", "색을 변경하거나, 여러가지 모드를 사용하실 수 있습니다.");
 
         ContextCompat.startForegroundService(this, serviceIntent);
     }

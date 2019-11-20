@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 public class BlueToothService extends Service {
-    public static final String CHANNEL_ID = "ForegroundServiceChannel";
+    public static final String CHANNEL_ID = "BlueToothServiceChannel";
 
     @Override
     public void onCreate() {
@@ -60,8 +60,9 @@ public class BlueToothService extends Service {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel serviceChannel = new NotificationChannel(
                     CHANNEL_ID,
-                    "Foreground Service Channel",
-                    NotificationManager.IMPORTANCE_DEFAULT
+                    "BlueTooth Service Channel",
+                    NotificationManager.IMPORTANCE_HIGH
+
             );
 
             NotificationManager manager = getSystemService(NotificationManager.class);
