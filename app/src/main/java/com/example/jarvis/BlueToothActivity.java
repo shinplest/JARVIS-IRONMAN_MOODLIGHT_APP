@@ -73,9 +73,6 @@ public class BlueToothActivity extends AppCompatActivity {
             public void onDeviceConnectionFailed() { //연결실패
                 Toast.makeText(getApplicationContext()
                         , "연결할 수 없습니다.", Toast.LENGTH_SHORT).show();
-                startService();
-                Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -92,6 +89,7 @@ public class BlueToothActivity extends AppCompatActivity {
     }
     public void onDestroy() {
         super.onDestroy();
+        stopService();
         bt.stopService(); //블루투스 중지
     }
 
