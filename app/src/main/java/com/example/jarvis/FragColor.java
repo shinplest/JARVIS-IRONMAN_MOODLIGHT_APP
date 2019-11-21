@@ -12,6 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.skydoves.colorpickerview.ColorEnvelope;
+import com.skydoves.colorpickerview.ColorPickerView;
+import com.skydoves.colorpickerview.listeners.ColorEnvelopeListener;
+
 import static com.example.jarvis.BlueToothActivity.bt;
 
 public class FragColor extends Fragment {
@@ -45,6 +49,17 @@ public class FragColor extends Fragment {
         btnOff.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 bt.send("off", true);
+            }
+        });
+
+        ColorPickerView colorPickerView = view.findViewById(R.id.colorPickerView);
+        colorPickerView.setColorListener(new ColorEnvelopeListener() {
+            @Override
+            public void onColorSelected(ColorEnvelope envelope, boolean fromUser) {
+
+                String HexColor = envelope.getHexCode().substring(2);
+                Toast.makeText(getActivity(), HexColor, Toast.LENGTH_SHORT).show();
+                bt.send(HexColor, true);
             }
         });
         return view;
