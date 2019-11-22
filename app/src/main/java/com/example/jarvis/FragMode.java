@@ -16,7 +16,6 @@ import static com.example.jarvis.BlueToothActivity.bt;
 
 public class FragMode extends Fragment {
 
-    int Mode = 0;
 
 
     public FragMode(){
@@ -33,18 +32,29 @@ public class FragMode extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragmode, container, false);
 
-        Button ChangeMode = view.findViewById(R.id.changemode);
+        Button RandomMode = view.findViewById(R.id.ramdonmode);
+        Button DustMode = view.findViewById(R.id.dustmode);
+        Button GeneralMode = view.findViewById(R.id.generalmode);
         final TextView textView = view.findViewById(R.id.modetext);
 
-        ChangeMode.setOnClickListener(new View.OnClickListener() {
+        GeneralMode.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Mode++;
-                if(Mode % 2 == 0){
-                    textView.setText("GENERAL MODE");
-                }else{
-                    textView.setText("DUST MODE");
-                }
-                bt.send("change", true);
+                textView.setText("General Mode");
+                bt.send("gen", true);
+            }
+        });
+
+        DustMode.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                textView.setText("Dust Mode");
+                bt.send("dus", true);
+            }
+        });
+
+        RandomMode.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                textView.setText("Ramdom Mode");
+                bt.send("ran", true);
             }
         });
 

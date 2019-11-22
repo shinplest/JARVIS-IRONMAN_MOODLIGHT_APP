@@ -10,14 +10,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="GENERAL MORE"
-        android:textSize="100sp"
+        android:textSize="50sp"
         android:textColor="@color/ironmanyellow"/>
 
     <Button
-        android:id="@+id/changemode"
+        android:id="@+id/generalmode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Change Mode"/>
+        android:text="General Mode"/>
+
+    <Button
+        android:id="@+id/dustmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dust Mode"/>
+    <Button
+        android:id="@+id/ramdonmode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Mode"/>
+
+
 
 
 </LinearLayout>
