@@ -5,9 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
+import static com.example.jarvis.BlueToothActivity.bt;
 import android.os.Bundle;
+import android.widget.Toast;
+
 import com.yinglan.alphatabs.AlphaTabsIndicator;
+
+import app.akexorcist.bluetotohspp.library.BluetoothSPP;
 
 
 public class MainActivity extends AppCompatActivity
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity
 
         alphaTabsIndicator = (AlphaTabsIndicator) findViewById(R.id.alphaIndicator);
         alphaTabsIndicator.setViewPager(vp);
+
 
     }
 

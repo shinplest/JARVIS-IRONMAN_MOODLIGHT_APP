@@ -249,11 +249,13 @@ public class BluetoothSPP {
     public void setBluetoothStateListener (BluetoothStateListener listener) {
         mBluetoothStateListener = listener;
     }
-    
+
     public void setOnDataReceivedListener (OnDataReceivedListener listener) {
-        mDataReceivedListener = listener;
+        if (mDataReceivedListener == null)
+            mDataReceivedListener = listener;
     }
-    
+
+
     public void setBluetoothConnectionListener (BluetoothConnectionListener listener) {
         mBluetoothConnectionListener = listener;
     }

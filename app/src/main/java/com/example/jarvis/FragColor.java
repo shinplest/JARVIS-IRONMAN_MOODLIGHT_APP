@@ -35,7 +35,7 @@ public class FragColor extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = (LinearLayout) inflater.inflate(R.layout.fragcolor, container, false);
+        View view = inflater.inflate(R.layout.fragcolor, container, false);
 
         Button btnOn = view.findViewById(R.id.btnSend);
         Button btnOff = view.findViewById(R.id.btnSend2);
@@ -58,7 +58,6 @@ public class FragColor extends Fragment {
             public void onColorSelected(ColorEnvelope envelope, boolean fromUser) {
 
                 String HexColor = envelope.getHexCode().substring(2);
-                Toast.makeText(getActivity(), HexColor, Toast.LENGTH_SHORT).show();
                 bt.send(HexColor, true);
             }
         });

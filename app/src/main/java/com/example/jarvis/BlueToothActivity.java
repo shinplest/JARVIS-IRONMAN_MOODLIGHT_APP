@@ -76,6 +76,8 @@ public class BlueToothActivity extends AppCompatActivity {
             }
         });
 
+
+
         btconnect_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if (bt.getServiceState() == BluetoothState.STATE_CONNECTED) {

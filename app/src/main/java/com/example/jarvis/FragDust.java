@@ -1,14 +1,21 @@
 package com.example.jarvis;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import app.akexorcist.bluetotohspp.library.BluetoothSPP;
+import app.akexorcist.bluetotohspp.library.BluetoothState;
+
+import static com.example.jarvis.BlueToothActivity.bt;
 
 public class FragDust extends Fragment {
     public FragDust(){
@@ -23,7 +30,19 @@ public class FragDust extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragdust, container, false);
-        return layout;
+        View view = inflater.inflate(R.layout.fragdust, container, false);
+
+        final TextView textView = view.findViewById(R.id.dusttext);
+
+        bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() {
+            public void onDataReceived(byte[] data, String message) {
+                // Do something when data incoming
+                textView.setText(message);
+                Toast.makeText(getActivity(), "up to date", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        return view;
     }
 }
