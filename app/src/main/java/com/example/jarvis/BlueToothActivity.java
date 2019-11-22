@@ -49,6 +49,10 @@ public class BlueToothActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext()
                     , "블루투스 사용이 가능한 기기입니다."
                     , Toast.LENGTH_LONG).show();
+            if(!bt.isBluetoothEnabled()) {
+                Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(intent, BluetoothState.REQUEST_ENABLE_BT);
+            }
         }
 
 
