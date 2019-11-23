@@ -37,8 +37,7 @@ public class FragDust extends Fragment {
         bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() {
             public void onDataReceived(byte[] data, String message) {
                 // Do something when data incoming
-                textView.setText(message);
-                Toast.makeText(getActivity(), "up to date", Toast.LENGTH_SHORT).show();
+                textView.setText(message + " ppm");
             }
         });
 

@@ -29,7 +29,7 @@ public class SplashActivity extends Activity {
         progessBar = (ProgressBar)findViewById(R.id.progressBar);
         progessBar.setProgress(0);
         progessBar.getProgressDrawable().setColorFilter(
-                Color.WHITE, android.graphics.PorterDuff.Mode.SRC_IN);
+                Color.BLACK, android.graphics.PorterDuff.Mode.SRC_IN);
 
         final long period = 30;
         timer = new Timer();

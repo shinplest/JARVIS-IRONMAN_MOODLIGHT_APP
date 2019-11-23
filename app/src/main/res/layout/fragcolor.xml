@@ -4,32 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@color/background">
+    tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSend"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="70dp"
-                android:text="Turn on"/>
-            <Button
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:text="ON"
+                android:textColor="@color/ironmanyellow"
+
+                android:textSize="25sp"
+                app:cornerRadius="10dp"/>
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSend2"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="70dp"
-                android:text="Turn off" />
+                android:layout_weight="1"
+                android:backgroundTint="@color/background"
+                android:text="OFF"
+                android:textColor="@color/ironmanyellow"
+                android:textSize="25sp"
+                app:cornerRadius="10dp"/>
 
 
         </LinearLayout>
@@ -41,23 +51,24 @@
     </LinearLayout>
 
     <TextView
-        android:layout_marginTop="20dp"
         android:id="@+id/brightnessText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Brightness level : 0"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Change Color"
+        android:textColor="@color/ironmanyellow"
+        android:textSize="30sp"/>
 
 
     <com.skydoves.colorpickerview.ColorPickerView
         android:id="@+id/colorPickerView"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        app:palette="@drawable/palette"
-        app:selector="@drawable/wheel"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        app:palette="@drawable/palette"
+        app:selector="@drawable/wheel"/>
 
 
 

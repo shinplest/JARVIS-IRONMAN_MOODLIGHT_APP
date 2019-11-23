@@ -39,7 +39,6 @@ public class BlueToothService extends Service {
 
         //do heavy work on a background thread
 
-
         //stopSelf();
 
         return START_NOT_STICKY;

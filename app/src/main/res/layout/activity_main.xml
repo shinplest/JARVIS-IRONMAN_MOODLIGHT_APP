@@ -20,7 +20,7 @@
     <com.yinglan.alphatabs.AlphaTabsIndicator
         android:id="@+id/alphaIndicator"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="60dp"
         android:orientation="horizontal">
 
         <com.yinglan.alphatabs.AlphaTabView
@@ -29,10 +29,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            app:tabText="COLORS &amp; BRIGHTNESS"
-            app:tabTextSize="13sp"
+            app:tabText="COLORS"
+            app:tabTextSize="15sp"
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b" />
+
 
         <com.yinglan.alphatabs.AlphaTabView
             android:id="@+id/btn_dust"
@@ -41,8 +42,8 @@
             android:layout_weight="1"
             android:padding="5dp"
 
-            app:tabText="미세먼"
-            app:tabTextSize="13sp"
+            app:tabText="DUST"
+            app:tabTextSize="15sp"
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b" />
 
@@ -53,8 +54,8 @@
             android:layout_weight="1"
             android:padding="5dp"
 
-            app:tabText="Change"
-            app:tabTextSize="13sp"
+            app:tabText="MODE"
+            app:tabTextSize="15sp"
             app:textColorNormal="#999999"
             app:textColorSelected="#46c01b"/>
 
