@@ -5,12 +5,14 @@
     android:background="@color/background">
 
     <TextView
+        android:layout_marginTop="300dp"
         android:id="@+id/dustinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="현재 공간의 미세먼지 농도"
         android:textSize="30sp"
-        android:textColor="@color/ironmanyellow"/>
+        android:textColor="@color/ironmanyellow"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/dusttext"
@@ -18,7 +20,8 @@
         android:layout_height="wrap_content"
         android:text="0.000 ppm"
         android:textSize="60sp"
-        android:textColor="@color/ironmanyellow"/>
+        android:textColor="@color/ironmanyellow"
+        android:layout_gravity="center"/>
 
 
 

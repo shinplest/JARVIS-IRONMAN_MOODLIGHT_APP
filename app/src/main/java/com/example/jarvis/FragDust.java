@@ -1,19 +1,16 @@
 package com.example.jarvis;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import app.akexorcist.bluetotohspp.library.BluetoothSPP;
-import app.akexorcist.bluetotohspp.library.BluetoothState;
 
 import static com.example.jarvis.BlueToothActivity.bt;
 
@@ -37,7 +34,7 @@ public class FragDust extends Fragment {
         bt.setOnDataReceivedListener(new BluetoothSPP.OnDataReceivedListener() {
             public void onDataReceived(byte[] data, String message) {
                 // Do something when data incoming
-                textView.setText(message + " ppm");
+                textView.setText(message + " µm");
             }
         });
 
