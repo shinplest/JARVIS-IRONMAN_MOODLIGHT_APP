@@ -90,6 +90,10 @@ public class BlueToothActivity extends AppCompatActivity {
             public void onDeviceConnectionFailed() { //연결실패
                 Toast.makeText(getApplicationContext()
                         , "연결할 수 없습니다.", Toast.LENGTH_SHORT).show();
+
+                //just for test
+                Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 

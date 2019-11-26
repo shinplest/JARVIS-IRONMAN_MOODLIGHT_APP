@@ -9,7 +9,15 @@
         android:layout_height="0dp"
         android:layout_weight="1"></LinearLayout>
 
+    <ImageView
+        android:id="@+id/faceimage"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/face_green_gimp"
+        android:layout_gravity="center"/>
+
     <TextView
+        android:layout_marginTop="50dp"
         android:id="@+id/dustinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
