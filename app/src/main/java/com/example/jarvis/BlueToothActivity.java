@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -60,12 +61,24 @@ public class BlueToothActivity extends AppCompatActivity {
 
         bt.setBluetoothConnectionListener(new BluetoothSPP.BluetoothConnectionListener() { //연결됐을 때
             public void onDeviceConnected(String name, String address) {
+                //블루투스 연결되었음을 보내
+                bt.send("connet", true);
+                new Handler().postDelayed(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+
+                        startService();
+                        Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                }, 3000);// 0.5초 정도 딜레이를 준 후 시작
+
                 Toast.makeText(getApplicationContext()
                         , "Connected to " + name + "\n" + address
-                        , Toast.LENGTH_LONG).show();
-                startService();
-                Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
-                startActivity(intent);
+                        , Toast.LENGTH_SHORT).show();
+
             }
 
             public void onDeviceDisconnected() { //연결해제

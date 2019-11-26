@@ -12,6 +12,8 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
+import static com.example.jarvis.BlueToothActivity.bt;
+
 public class BlueToothService extends Service {
     public static final String CHANNEL_ID = "BlueToothServiceChannel";
 
@@ -38,7 +40,6 @@ public class BlueToothService extends Service {
         startForeground(1, notification);
 
         //do heavy work on a background thread
-
         //stopSelf();
 
         return START_NOT_STICKY;
