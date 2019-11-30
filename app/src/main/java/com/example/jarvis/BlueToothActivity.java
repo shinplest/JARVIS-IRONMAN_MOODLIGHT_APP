@@ -49,7 +49,7 @@ public class BlueToothActivity extends AppCompatActivity {
         else {
             Toast.makeText(getApplicationContext()
                     , "블루투스 사용이 가능한 기기입니다."
-                    , Toast.LENGTH_LONG).show();
+                    , Toast.LENGTH_SHORT).show();
             if(!bt.isBluetoothEnabled()) {
                 Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(intent, BluetoothState.REQUEST_ENABLE_BT);
@@ -73,7 +73,7 @@ public class BlueToothActivity extends AppCompatActivity {
                         Intent intent = new Intent(BlueToothActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
-                }, 3000);// 0.5초 정도 딜레이를 준 후 시작
+                }, 500);// 0.5초 정도 딜레이를 준 후 시작
 
                 Toast.makeText(getApplicationContext()
                         , "Connected to " + name + "\n" + address
