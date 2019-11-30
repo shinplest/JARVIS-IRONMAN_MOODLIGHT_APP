@@ -3,4 +3,4 @@
 IRONMAN_MOODLIGHT 전용 Android application
 
 
-<img src="sample_app" width="40%">
+<img src="app_sample.gif" width="40%">
