@@ -3,11 +3,11 @@
 IRONMAN_MOODLIGHT 전용 Android application
 
 
-<img src="app_sample.gif" width="50%">
+<img src="app_sample.gif" width="45%">
 
 # Library
 
-colorPickerView by skydoves
+colorPickerView by skydoves  
 https://github.com/skydoves/ColorPickerView
 
 ```
@@ -27,7 +27,7 @@ limitations under the License.
 
 ```
 
-Android-BluetoothSPPLibrary by Akexorcist
+Android-BluetoothSPPLibrary by Akexorcist  
 https://github.com/akexorcist/Android-BluetoothSPPLibrary
 
 ```
