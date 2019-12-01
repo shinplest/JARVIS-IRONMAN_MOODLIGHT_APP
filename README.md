@@ -3,7 +3,7 @@
 IRONMAN_MOODLIGHT 전용 Android application
 
 
-<img src="app_sample.gif" width="30%">
+<img src="app_sample.gif" width="50%">
 
 # License
 ```
