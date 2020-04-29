@@ -31,10 +31,7 @@ public class MainActivity extends AppCompatActivity
 
         alphaTabsIndicator = (AlphaTabsIndicator) findViewById(R.id.alphaIndicator);
         alphaTabsIndicator.setViewPager(vp);
-
-
     }
-
 
     private class pagerAdapter extends FragmentStatePagerAdapter
     {
